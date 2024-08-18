@@ -5,10 +5,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t stephengrider/docker-react -f Dockerfile.dev .
+  - docker build -t apisani1/fontend -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true stephengrider/docker-react npm run test
+  - docker run -e CI=true apisani1/frontend npm run test
 
 deploy:
   provider: elasticbeanstalk
